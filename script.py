@@ -18,7 +18,7 @@ for num_sommet, info in graph.items():
         print(f"Attention : La station {info['nom']} (Sommet {num_sommet}) n'a aucun voisin.")
 
 #Plus court chemin
-
+chemin, temps_total = bellman_ford(graph, edges, "Carrefour Pleyel", "Villejuif, P. Vaillant Couturier")
 
 
 #ACPM
