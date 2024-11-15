@@ -38,9 +38,3 @@ def afficher_acpm(acpm_edges, graph):
         print(f"{station_u} - {station_v} avec un poids de {weight} secondes")
         total_weight += weight  # Ajoute le poids de l'arête au poids total
     print(f"Poids total de l'ACPM : {total_weight} secondes")
-
-def generer_acpm(graph):
-    # Récupère un sommet de départ arbitraire
-    start = next(iter(graph))
-    acpm_edges = Prim(graph, start)
-    afficher_acpm(acpm_edges, graph)

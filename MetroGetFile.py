@@ -3,7 +3,7 @@ import csv
 def lire_metro():
     graph = {}
     edges = []
-    with open("metro.txt", "r") as f:
+    with open("metro_old.txt", "r", encoding='utf-8') as f:
         reader = csv.reader(f, delimiter=';')
         
         # Traitement des sommets
@@ -35,7 +35,7 @@ def lire_metro():
                 graph[num_sommet1]['voisins'].append((num_sommet2, temps))
                 graph[num_sommet2]['voisins'].append((num_sommet1, temps))
                 
-                # Stockage de l'arête dans une liste séparée (optionnel)
+                # Stockage de l'arête dans une liste séparée
                 edges.append((num_sommet1, num_sommet2, temps))
 
     return graph, edges
