@@ -23,6 +23,10 @@ for num_sommet, info in graph.items():
 chemin, temps_total = bellman_ford(graph, edge, "Carrefour Pleyel", "Villejuif, P. Vaillant Couturier")
 
 
+# Afficher le chemin dans un fichier HTML 
+chemin_détaillé = [{"nom": graph[station_id]["nom"], "ligne": graph[station_id]["ligne"]} for station_id in chemin]
+afficher_chemin_en_html(chemin_détaillé, temps_total)
+
 #ACPM
 start_node = 0
 acpm_edges = prm.Prim(graph, start_node)  # Récupérer les arêtes de l'ACPM
